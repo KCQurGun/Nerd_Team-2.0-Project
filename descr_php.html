@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHP | Методичка по языкам программирования</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Методичка по языкам программирования</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="info.html">Информация</a></li>
+          <li><a href="regist.html">Регистрация</a></li>
+          <li><a href="login.html">Вход</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle">Сменить тему</button>
+    </header>
+
+    <main>
+      <section>
+        <h2>PHP</h2>
+        
+        <div class="language-info">
+          <div class="info-content">
+            <p>
+              PHP (PHP: Hypertext Preprocessor) — скриптовый язык программирования общего назначения, который особенно подходит для веб-разработки. Создан Расмусом Лердорфом в 1994 году, PHP стал одним из основных языков для создания динамических веб-сайтов и веб-приложений.
+            </p>
+            
+            <h3>Основные характеристики</h3>
+            <ul>
+              <li>Интерпретируемый серверный язык</li>
+              <li>Динамическая типизация</li>
+              <li>Встраивание в HTML</li>
+              <li>Обширная поддержка различных баз данных</li>
+              <li>Объектно-ориентированное программирование с PHP 5+</li>
+              <li>Простота в изучении и использовании</li>
+            </ul>
+            
+            <h3>Области применения</h3>
+            <ul>
+              <li>Серверная веб-разработка</li>
+              <li>Разработка систем управления контентом (CMS)</li>
+              <li>Создание веб-приложений и API</li>
+              <li>Работа с базами данных</li>
+              <li>Командные скрипты для администрирования</li>
+            </ul>
+            
+            <h3>Пример кода</h3>
+            <pre>
+&lt;?php
+// Подключение к базе данных MySQL
+$host = 'localhost';
+$dbname = 'my_database';
+$username = 'root';
+$password = 'password';
+
+try {
+    // Создание подключения через PDO
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    
+    // Установка режима обработки ошибок
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+    // Выполнение запроса с подготовленным выражением
+    $stmt = $pdo->prepare("SELECT * FROM users WHERE active = :active ORDER BY name");
+    
+    $stmt->execute(['active' => 1]);
+    
+    // Получение результатов
+    $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    // Вывод результатов
+    echo "&lt;h3>Активные пользователи:&lt;/h3>";
+    echo "&lt;ul>";
+    foreach ($users as $user) {
+        echo "&lt;li>" . htmlspecialchars($user['name']) . " - " . htmlspecialchars($user['email']) . "&lt;/li>";
+    }
+    echo "&lt;/ul>";
+    
+} catch (PDOException $e) {
+    // Обработка ошибок
+    echo "Ошибка подключения к базе данных: " . $e->getMessage();
+}
+?&gt;
+            </pre>
+            
+            <h3>Популярные фреймворки и CMS</h3>
+            <ul>
+              <li><strong>Laravel</strong> — современный MVC-фреймворк с элегантным синтаксисом</li>
+              <li><strong>Symfony</strong> — набор повторно используемых компонентов</li>
+              <li><strong>WordPress</strong> — самая популярная в мире CMS</li>
+              <li><strong>Drupal</strong> — мощная CMS для крупных проектов</li>
+              <li><strong>CodeIgniter</strong> — легковесный и быстрый фреймворк</li>
+            </ul>
+            
+            <p>
+              Несмотря на появление новых технологий, PHP остается одним из самых распространенных языков для веб-разработки благодаря своей доступности, простоте использования и обширной экосистеме. Современные версии PHP (7.x и 8.x) значительно улучшили производительность и добавили множество новых возможностей.
+            </p>
+          </div>
+        </div>
+        
+        <p><a href="info.html">← Назад к списку языков</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Методичка по языкам программирования</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Регистрация | Методичка по языкам программирования</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Методичка по языкам программирования</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="info.html">Информация</a></li>
+          <li><a href="regist.html" class="active">Регистрация</a></li>
+          <li><a href="login.html">Вход</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle">Сменить тему</button>
+    </header>
+
+    <main>
+      <section>
+        <h2>Регистрация</h2>
+        <p>Зарегистрируйтесь, чтобы получать обновления о новых материалах.</p>
+
+        <form id="registForm">
+          <div class="form-group">
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+
+          <div class="form-group">
+            <label>Интересующие языки программирования:</label>
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                id="python"
+                name="languages"
+                value="python"
+              />
+              <label for="python">Python</label>
+
+              <input
+                type="checkbox"
+                id="javascript"
+                name="languages"
+                value="javascript"
+              />
+              <label for="javascript">JavaScript</label>
+
+              <input type="checkbox" id="java" name="languages" value="java" />
+              <label for="java">Java</label>
+
+              <input type="checkbox" id="cpp" name="languages" value="cpp" />
+              <label for="cpp">C++</label>
+            </div>
+          </div>
+
+          <button type="submit" id="submitBtn">Зарегистрироваться</button>
+        </form>
+
+        <div id="registrationMessage" class="hidden"></div>
+        <p>Уже есть аккаунт? <a href="login.html">Войти</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Created by Nerd_Team 2.0 Corporation</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="users.js"></script>
+  </body>
+</html>

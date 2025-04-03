@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Методичка по языкам программирования</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Методичка по языкам программирования</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Главная</a></li>
+          <li><a href="info.html">Информация</a></li>
+          <li><a href="regist.html">Регистрация</a></li>
+          <li><a href="login.html">Вход</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle">Сменить тему</button>
+    </header>
+
+    <main>
+      <section>
+        <h2>Добро пожаловать в методичку по языкам программирования</h2>
+        <p>
+          Здесь вы найдете базовую информацию о самых популярных языках
+          программирования.
+        </p>
+
+        <div id="popularLanguages">
+          <h3>Популярные языки программирования:</h3>
+          <ul>
+            <li>Python - отлично подходит для начинающих</li>
+            <li>JavaScript - язык веб-разработки</li>
+            <li>Java - универсальный объектно-ориентированный язык</li>
+            <li>C++ - мощный язык для системного программирования</li>
+            <li>PHP - язык для веб-серверов</li>
+          </ul>
+        </div>
+
+        <div class="api-container">
+          <h3>Курсы валют</h3>
+          <button id="loadCurrency">Загрузить курсы валют</button>
+          <div id="currencyData"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Created by Nerd_Team 2.0 Corporation</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

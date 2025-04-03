@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C# | Методичка по языкам программирования</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Методичка по языкам программирования</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="info.html">Информация</a></li>
+          <li><a href="regist.html">Регистрация</a></li>
+          <li><a href="login.html">Вход</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle">Сменить тему</button>
+    </header>
+
+    <main>
+      <section>
+        <h2>C# (C Sharp)</h2>
+
+        <div class="language-info">
+          <div class="info-content">
+            <p>
+              C# (произносится "си шарп") — современный объектно-ориентированный
+              язык программирования, разработанный компанией Microsoft в рамках
+              инициативы .NET. Создан в 2000 году под руководством Андерса
+              Хейлсберга, C# сочетает в себе лучшие черты C++ и Java, предлагая
+              мощные инструменты для разработки различных типов приложений.
+            </p>
+
+            <h3>Основные характеристики</h3>
+            <ul>
+              <li>Объектно-ориентированное программирование</li>
+              <li>Строгая статическая типизация</li>
+              <li>Компонентно-ориентированное программирование</li>
+              <li>Автоматическое управление памятью (сборка мусора)</li>
+              <li>Поддержка обобщенного программирования (generics)</li>
+              <li>LINQ (Language Integrated Query) для работы с данными</li>
+              <li>Асинхронное программирование (async/await)</li>
+            </ul>
+
+            <h3>Области применения</h3>
+            <ul>
+              <li>
+                Разработка настольных приложений для Windows (WinForms, WPF)
+              </li>
+              <li>Веб-разработка (ASP.NET Core)</li>
+              <li>Разработка игр (Unity)</li>
+              <li>Корпоративные бизнес-приложения</li>
+              <li>Мобильная разработка (Xamarin)</li>
+              <li>Облачные сервисы и микросервисы</li>
+            </ul>
+
+            <h3>Пример кода</h3>
+            <pre>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace CSharpExample
+{
+    // Определение класса
+    public class Product
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public string Category { get; set; }
+    }
+
+    class Program
+    {
+        static async Task Main(string[] args)
+        {
+            // Создаем коллекцию продуктов
+            var products = new List&lt;Product>
+            {
+                new Product { Id = 1, Name = "Ноутбук", Price = 65000, Category = "Электроника" },
+                new Product { Id = 2, Name = "Смартфон", Price = 35000, Category = "Электроника" },
+                new Product { Id = 3, Name = "Кофеварка", Price = 8000, Category = "Бытовая техника" },
+                new Product { Id = 4, Name = "Стол", Price = 12000, Category = "Мебель" },
+                new Product { Id = 5, Name = "Наушники", Price = 5000, Category = "Электроника" }
+            };
+            
+            // Использование LINQ для фильтрации и группировки
+            var expensiveElectronics = products
+                .Where(p => p.Category == "Электроника" && p.Price > 30000)
+                .OrderBy(p => p.Price)
+                .ToList();
+                
+            Console.WriteLine("Дорогая электроника:");
+            foreach (var product in expensiveElectronics)
+            {
+                Console.WriteLine($"{product.Name} - {product.Price} руб.");
+            }
+            
+            // Асинхронный метод
+            await FetchDataAsync();
+        }
+        
+        static async Task FetchDataAsync()
+        {
+            Console.WriteLine("Загрузка данных...");
+            await Task.Delay(2000); // Имитация асинхронной операции
+            Console.WriteLine("Данные загружены!");
+        }
+    }
+}
+            </pre>
+
+            <h3>Популярные фреймворки и технологии</h3>
+            <ul>
+              <li>
+                <strong>.NET</strong> — платформа для разработки различных типов
+                приложений
+              </li>
+              <li>
+                <strong>ASP.NET Core</strong> — кроссплатформенный фреймворк для
+                веб-разработки
+              </li>
+              <li>
+                <strong>Entity Framework Core</strong> — ORM для работы с базами
+                данных
+              </li>
+              <li>
+                <strong>Unity</strong> — популярный движок для разработки игр
+              </li>
+              <li>
+                <strong>Xamarin</strong> — платформа для разработки мобильных
+                приложений
+              </li>
+              <li>
+                <strong>Blazor</strong> — фреймворк для создания веб-приложений
+                с использованием C# вместо JavaScript
+              </li>
+            </ul>
+
+            <p>
+              C# постоянно развивается, с каждой новой версией добавляя
+              современные функции и улучшая производительность. С переходом на
+              .NET 5/6/7, Microsoft сделала платформу кроссплатформенной, что
+              значительно расширило области применения языка. C# остается одним
+              из самых популярных языков программирования благодаря своей
+              мощности, выразительности и обширной экосистеме.
+            </p>
+          </div>
+        </div>
+
+        <p><a href="info.html">← Назад к списку языков</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Created by Nerd_Team 2.0 Corporation</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java | Методичка по языкам программирования</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Методичка по языкам программирования</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="info.html">Информация</a></li>
+          <li><a href="regist.html">Регистрация</a></li>
+          <li><a href="login.html">Вход</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle">Сменить тему</button>
+    </header>
+
+    <main>
+      <section>
+        <h2>Java</h2>
+
+        <div class="language-info">
+          <div class="info-content">
+            <p>
+              Java — объектно-ориентированный язык программирования,
+              разработанный компанией Sun Microsystems (ныне принадлежит Oracle)
+              и выпущенный в 1995 году. Java был создан Джеймсом Гослингом и
+              спроектирован как язык с принципом "Write Once, Run Anywhere"
+              (Напиши один раз, запускай где угодно).
+            </p>
+
+            <h3>Основные характеристики</h3>
+            <ul>
+              <li>
+                Компилируемый в байт-код, выполняемый на Java Virtual Machine
+                (JVM)
+              </li>
+              <li>Строгая статическая типизация</li>
+              <li>Объектно-ориентированный подход с одиночным наследованием</li>
+              <li>Автоматическое управление памятью (сборка мусора)</li>
+              <li>Кроссплатформенность благодаря JVM</li>
+              <li>Многопоточность и параллелизм</li>
+            </ul>
+
+            <h3>Области применения</h3>
+            <ul>
+              <li>Корпоративные приложения (Enterprise Applications)</li>
+              <li>Веб-приложения и сервисы</li>
+              <li>Мобильная разработка (Android)</li>
+              <li>Банковские и финансовые системы</li>
+              <li>Встраиваемые системы и IoT</li>
+            </ul>
+
+            <h3>Пример кода</h3>
+            <pre>
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class StreamExample {
+    public static void main(String[] args) {
+        // Создаем список чисел
+        List&lt;Integer&gt; numbers = new ArrayList&lt;&gt;();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+        numbers.add(5);
+        
+        // Используем Stream API для фильтрации и преобразования
+        List&lt;Integer&gt; squaredEvenNumbers = numbers.stream()
+            .filter(n -> n % 2 == 0)         // Оставляем только четные числа
+            .map(n -> n * n)                 // Возводим в квадрат
+            .collect(Collectors.toList());   // Собираем в новый список
+        
+        // Выводим результат
+        System.out.println("Квадраты четных чисел: " + squaredEvenNumbers);
+    }
+}
+            </pre>
+
+            <h3>Популярные фреймворки и библиотеки</h3>
+            <ul>
+              <li>
+                <strong>Spring</strong> — популярный фреймворк для разработки
+                корпоративных приложений
+              </li>
+              <li>
+                <strong>Hibernate</strong> — библиотека ORM для работы с базами
+                данных
+              </li>
+              <li>
+                <strong>Jakarta EE</strong> (ранее Java EE) — платформа для
+                корпоративных приложений
+              </li>
+              <li>
+                <strong>Apache Tomcat</strong> — сервер приложений для Java
+                веб-приложений
+              </li>
+              <li>
+                <strong>Android SDK</strong> — для разработки мобильных
+                приложений
+              </li>
+            </ul>
+
+            <p>
+              Java остается одним из самых востребованных языков
+              программирования в мире благодаря своей надежности,
+              производительности и широкому спектру применения в различных
+              областях информационных технологий.
+            </p>
+          </div>
+        </div>
+
+        <p><a href="info.html">← Назад к списку языков</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Created by Nerd_Team 2.0 Corporation</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

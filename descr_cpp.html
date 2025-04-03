@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C++ | Методичка по языкам программирования</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Методичка по языкам программирования</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="info.html">Информация</a></li>
+          <li><a href="regist.html">Регистрация</a></li>
+          <li><a href="login.html">Вход</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle">Сменить тему</button>
+    </header>
+
+    <main>
+      <section>
+        <h2>C++</h2>
+        
+        <div class="language-info">
+          <div class="info-content">
+            <p>
+              C++ — компилируемый, статически типизированный язык программирования общего назначения. Разработан Бьёрном Страуструпом в 1979 году как расширение языка C, добавляющее объектно-ориентированные возможности. C++ сочетает в себе возможности высокого уровня абстракции с эффективностью низкоуровневых операций.
+            </p>
+            
+            <h3>Основные характеристики</h3>
+            <ul>
+              <li>Компилируемый язык со статической типизацией</li>
+              <li>Поддержка различных парадигм программирования (процедурное, ООП, обобщённое)</li>
+              <li>Низкоуровневое взаимодействие с памятью и аппаратными ресурсами</li>
+              <li>Множественное наследование</li>
+              <li>Шаблоны и метапрограммирование</li>
+              <li>Высокая производительность</li>
+            </ul>
+            
+            <h3>Области применения</h3>
+            <ul>
+              <li>Системное программирование (операционные системы, драйверы)</li>
+              <li>Разработка игр и игровых движков</li>
+              <li>Высокопроизводительные приложения и серверы</li>
+              <li>Встроенные системы и IoT</li>
+              <li>Финансовые системы с высокочастотной торговлей</li>
+            </ul>
+            
+            <h3>Пример кода</h3>
+            <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;string&gt;
+
+// Определение класса
+class Person {
+private:
+    std::string name;
+    int age;
+    
+public:
+    // Конструктор
+    Person(const std::string& name, int age) : name(name), age(age) {}
+    
+    // Геттеры
+    std::string getName() const { return name; }
+    int getAge() const { return age; }
+    
+    // Перегрузка оператора
+    bool operator<(const Person& other) const {
+        return age < other.age;
+    }
+};
+
+int main() {
+    // Создание вектора объектов
+    std::vector&lt;Person&gt; people;
+    people.emplace_back("Иван", 30);
+    people.emplace_back("Мария", 25);
+    people.emplace_back("Алексей", 35);
+    
+    // Сортировка по возрасту с использованием стандартной библиотеки
+    std::sort(people.begin(), people.end());
+    
+    // Вывод отсортированного списка
+    std::cout << "Люди в порядке возрастания возраста:" << std::endl;
+    for (const auto& person : people) {
+        std::cout << person.getName() << ": " << person.getAge() << " лет" << std::endl;
+    }
+    
+    return 0;
+}
+            </pre>
+            
+            <h3>Популярные библиотеки и фреймворки</h3>
+            <ul>
+              <li><strong>STL (Standard Template Library)</strong> — стандартная библиотека шаблонов</li>
+              <li><strong>Boost</strong> — набор высококачественных библиотек</li>
+              <li><strong>Qt</strong> — кроссплатформенный фреймворк для разработки GUI-приложений</li>
+              <li><strong>Unreal Engine</strong> — мощный игровой движок</li>
+              <li><strong>OpenCV</strong> — библиотека для компьютерного зрения</li>
+            </ul>
+            
+            <p>
+              C++ остается одним из важнейших языков программирования, особенно в областях, где критически важна производительность и контроль над ресурсами. Несмотря на сложность, он продолжает активно развиваться, получая новые возможности в современных стандартах (C++11, C++14, C++17, C++20).
+            </p>
+          </div>
+        </div>
+        
+        <p><a href="info.html">← Назад к списку языков</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Методичка по языкам программирования</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

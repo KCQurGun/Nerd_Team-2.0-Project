@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript | Методичка по языкам программирования</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Методичка по языкам программирования</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="info.html">Информация</a></li>
+          <li><a href="regist.html">Регистрация</a></li>
+          <li><a href="login.html">Вход</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle">Сменить тему</button>
+    </header>
+
+    <main>
+      <section>
+        <h2>JavaScript</h2>
+
+        <div class="language-info">
+          <div class="info-content">
+            <p>
+              JavaScript — мультипарадигменный язык программирования, который
+              изначально был создан для добавления интерактивности
+              веб-страницам. Разработан Бренданом Эйхом в 1995 году, JavaScript
+              сегодня используется не только в браузерах, но и на серверах,
+              мобильных устройствах и во многих других средах.
+            </p>
+
+            <h3>Основные характеристики</h3>
+            <ul>
+              <li>Интерпретируемый язык с динамической типизацией</li>
+              <li>Прототипно-ориентированное программирование</li>
+              <li>Функции как объекты первого класса</li>
+              <li>Поддержка асинхронного программирования</li>
+              <li>Поддержка замыканий и функций высшего порядка</li>
+              <li>Стандартизирован как ECMAScript</li>
+            </ul>
+
+            <h3>Области применения</h3>
+            <ul>
+              <li>Клиентская веб-разработка (интерактивность браузера)</li>
+              <li>Серверная веб-разработка (Node.js)</li>
+              <li>Мобильная разработка (React Native, Ionic)</li>
+              <li>Настольные приложения (Electron)</li>
+              <li>Игровая разработка</li>
+            </ul>
+
+            <h3>Пример кода</h3>
+            <pre>
+// Асинхронная функция для получения данных
+async function fetchUserData(userId) {
+    try {
+        const response = await fetch(`https://api.example.com/users/${userId}`);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        
+        const userData = await response.json();
+        console.log('Получены данные пользователя:', userData);
+        return userData;
+    } catch (error) {
+        console.error('Ошибка при загрузке данных:', error);
+        return null;
+    }
+}
+
+// Использование функции
+fetchUserData(123).then(data => {
+    if (data) {
+        document.getElementById('username').textContent = data.name;
+    }
+});
+            </pre>
+
+            <h3>Популярные фреймворки и библиотеки</h3>
+            <ul>
+              <li>
+                <strong>React</strong> — библиотека для создания
+                пользовательских интерфейсов
+              </li>
+              <li>
+                <strong>Angular</strong> — фреймворк для создания одностраничных
+                приложений
+              </li>
+              <li>
+                <strong>Vue.js</strong> — прогрессивный фреймворк для создания
+                пользовательских интерфейсов
+              </li>
+              <li>
+                <strong>Express</strong> — минималистичный веб-фреймворк для
+                Node.js
+              </li>
+              <li>
+                <strong>jQuery</strong> — библиотека для упрощения работы с DOM
+              </li>
+            </ul>
+
+            <p>
+              JavaScript является одним из ключевых языков веб-разработки, и его
+              экосистема постоянно растет и развивается, делая его универсальным
+              инструментом для разработки приложений различного типа.
+            </p>
+          </div>
+        </div>
+
+        <p><a href="info.html">← Назад к списку языков</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Created by Nerd_Team 2.0 Corporation</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
